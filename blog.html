@@ -28,48 +28,69 @@
       <h1 class="text-center font-bold text-2xl mt-8 mb-5">Blogs</h1>
 
       <div class="mx-20 bg-white px-6 py-4 rounded-xl space-y-5 mb-5">
-        Question-1: What are the different ways to select an element in the DOM?
+        <h1 class="font-bold text-xl">
+          Question-1: What are the different ways to select an element in the
+          DOM?
+        </h1>
         <hr class="border-t-2 border-dotted border-black w-full my-4" />
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint minima
-          saepe eum delectus. Ratione eveniet explicabo harum illum similique
-          modi.
+          Different ways to select an element in the DOM: 1.I can use
+          querySelectorAll() to get all the element with the id or class thats
+          in the bracket. 2.I can use getElementByTagName() 3.I can use
+          getElementsByClassName() 3.I can use getElementById()
+          4.querySelector(),the method returns the first element
         </p>
       </div>
       <div class="mx-20 bg-white px-6 py-4 rounded-xl space-y-5 mb-5">
-        Question-1: What are the different ways to select an element in the DOM?
+        <h1 class="font-bold text-xl">
+          Question-2: What is the difference between innerHTML, innerText, and
+          textContent ?
+        </h1>
         <hr class="border-t-2 border-dotted border-black w-full my-4" />
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint minima
-          saepe eum delectus. Ratione eveniet explicabo harum illum similique
-          modi.
+          innerHTML can create the entire HTML structure in the javascript,
+          innerText can create a text or even can get a text and lastly
+          innerContent used for only text not related to any kind of further
+          stylings
         </p>
       </div>
       <div class="mx-20 bg-white px-6 py-4 rounded-xl space-y-5 mb-5">
-        Question-1: What are the different ways to select an element in the DOM?
+        <h1 class="font-bold text-xl">
+          Question-3: What is event delegation in the DOM?
+        </h1>
+
         <hr class="border-t-2 border-dotted border-black w-full my-4" />
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint minima
-          saepe eum delectus. Ratione eveniet explicabo harum illum similique
-          modi.
+          Event delegation in DOM is basically not giving the event listener to
+          the child element, we will directly give the event listener to the
+          parent node.By doing this,every child get access to the event listener
         </p>
       </div>
       <div class="mx-20 bg-white px-6 py-4 rounded-xl space-y-5 mb-5">
-        Question-1: What are the different ways to select an element in the DOM?
+        <h1 class="font-bold text-xl">
+          Question-4: What is event bubbling in the DOM?
+        </h1>
         <hr class="border-t-2 border-dotted border-black w-full my-4" />
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint minima
-          saepe eum delectus. Ratione eveniet explicabo harum illum similique
-          modi.
+          There are two phases:1.Capture phase and 2.Bubbling phase.In capture
+          phase it will go down from document to body to event.target.On the
+          other hand,bubbling phase will bubble up to the top most element and
+          get access of the target
         </p>
       </div>
       <div class="mx-20 bg-white px-6 py-4 rounded-xl space-y-5 mb-5">
-        Question-1: What are the different ways to select an element in the DOM?
+        <h1 class="font-bold text-xl">
+          Question-5: How do you create, add, and remove elements using
+          JavaScript?
+        </h1>
+
         <hr class="border-t-2 border-dotted border-black w-full my-4" />
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint minima
-          saepe eum delectus. Ratione eveniet explicabo harum illum similique
-          modi.
+          creating element: const newElement=document.createElement('id'),
+          <br />
+          add element :newElement.innerText = newElement,
+          <br />
+          remove element:document.getElementByID('ggg').remove()
         </p>
       </div>
     </main>

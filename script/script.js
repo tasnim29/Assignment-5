@@ -40,8 +40,11 @@ for (let btn of completedBtn) {
       "font-semibold",
       "text-gray"
     );
+    const hour = new Date().getHours();
+    const min = new Date().getMinutes();
+    const sec = new Date().getSeconds();
     div.innerHTML = `
-    <h2>"You have Complete The Task" ${titleBox} "at 12:48:15 PM"</h2>
+    <h2>"You have Complete The Task" ${titleBox} "at ${hour}:${min}:${sec} "</h2>
     `;
     historyContainer.appendChild(div);
   });
@@ -60,3 +63,36 @@ document
   .addEventListener("click", function () {
     window.location.href = "./blog.html";
   });
+
+//change background color
+document
+  .getElementById("background-change-btn")
+  .addEventListener("click", function (event) {
+    const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+    event.target.style.transform = "rotate(180deg)";
+    document.body.style.backgroundColor = randomColor;
+  });
+
+// get the dynamic date
+const todayDate = document.getElementById("today-date");
+const months = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "April",
+  "May",
+  "June",
+  "Jul",
+  "Aug",
+  "Sept",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const today = new Date();
+year = today.getFullYear();
+date = today.getDate();
+day = days[today.getDay()];
+month = months[today.getMonth()];
+todayDate.innerHTML = `${day}, <br/> <h1 class="font-bold text-lg">${month} ${date} ${year}</h1>`;
