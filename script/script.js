@@ -53,3 +53,10 @@ const clearHistoryButton = document
   .addEventListener("click", function () {
     document.getElementById("history-container").innerHTML = "";
   });
+
+// click discover something
+document
+  .getElementById("discover-something")
+  .addEventListener("click", function () {
+    window.location.href = "./blog.html";
+  });
