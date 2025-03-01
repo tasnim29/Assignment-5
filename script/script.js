@@ -4,7 +4,7 @@ const completedBtn = document.getElementsByClassName("completed-btn");
 let completedBtnCounts = 0;
 let allTasks = completedBtn.length;
 for (let btn of completedBtn) {
-  btn.addEventListener("click", function () {
+  btn.addEventListener("click", function (event) {
     alert("Board updated successfully");
     completedBtnCounts++;
     if (completedBtnCounts === allTasks) {
@@ -27,8 +27,10 @@ for (let btn of completedBtn) {
     navCheckBox.innerText = updatedNavCheckNumber;
 
     const historyContainer = document.getElementById("history-container");
-    const titleBox = document.querySelectorAll(".title-box");
-    console.log(titleBox);
+
+    const taskBox = event.target.parentElement.parentElement.parentElement;
+    const taskElement = taskBox.querySelector(".title-box");
+    const taskTitle = taskElement.innerText;
 
     const div = document.createElement("div");
     div.classList.add(
@@ -45,7 +47,7 @@ for (let btn of completedBtn) {
     const min = new Date().getMinutes();
     const sec = new Date().getSeconds();
     div.innerHTML = `
-    <h2>"You have Complete The Task" ${titleBox} "at ${hour}:${min}:${sec} "</h2>
+    <h2>You have Complete The Task ${taskTitle} at ${hour}:${min}:${sec} AM </h2>
     `;
     historyContainer.appendChild(div);
   });
