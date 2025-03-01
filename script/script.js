@@ -1,3 +1,5 @@
+// complete button task
+
 const completedBtn = document.getElementsByClassName("completed-btn");
 let completedBtnCounts = 0;
 let allTasks = completedBtn.length;
@@ -45,6 +47,7 @@ for (let btn of completedBtn) {
   });
 }
 
+// clear history task
 const clearHistoryButton = document
   .getElementById("clear-history")
   .addEventListener("click", function () {
