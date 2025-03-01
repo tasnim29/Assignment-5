@@ -27,7 +27,7 @@ for (let btn of completedBtn) {
     navCheckBox.innerText = updatedNavCheckNumber;
 
     const historyContainer = document.getElementById("history-container");
-    const titleBox = document.querySelector(".title-box");
+    const titleBox = document.querySelectorAll(".title-box");
     console.log(titleBox);
 
     const div = document.createElement("div");
@@ -35,6 +35,7 @@ for (let btn of completedBtn) {
       "bg-[#F4F7FF]",
       "rounded-xl",
       "mt-8",
+      "mb-3",
       "mx-3",
       "p-4",
       "font-semibold",
@@ -65,11 +66,24 @@ document
   });
 
 //change background color
+
+const randomColors = [
+  "red",
+  "blue",
+  "green",
+  "yellow",
+  "pink",
+  "cyan",
+  "purple",
+  "orange",
+  "Black",
+  "navy",
+];
 document
   .getElementById("background-change-btn")
   .addEventListener("click", function (event) {
-    const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
-    event.target.style.transform = "rotate(180deg)";
+    const randomColor =
+      randomColors[Math.floor(Math.random() * randomColors.length)];
     document.body.style.backgroundColor = randomColor;
   });
 
