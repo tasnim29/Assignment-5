@@ -58,7 +58,7 @@ for (let btn of completedBtn) {
     }
 
     div.innerHTML = `
-    <h2>You have Complete The Task ${taskTitle} at ${hour}:${min}:${sec} ${AmPm} </h2>
+    <h2>You have Completed The Task ${taskTitle} at ${hour}:${min}:${sec} ${AmPm} </h2>
     `;
     historyContainer.appendChild(div);
   });
