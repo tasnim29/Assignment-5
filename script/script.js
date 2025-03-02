@@ -43,11 +43,22 @@ for (let btn of completedBtn) {
       "font-semibold",
       "text-gray"
     );
-    const hour = new Date().getHours();
+    let hour = new Date().getHours();
+    hour = hour % 12;
+    if (hour === 0) {
+      hour = 12;
+    }
     const min = new Date().getMinutes();
     const sec = new Date().getSeconds();
+    let AmPm = "";
+    if (hour >= 12) {
+      AmPm = "PM";
+    } else {
+      AmPm = "AM";
+    }
+
     div.innerHTML = `
-    <h2>You have Complete The Task ${taskTitle} at ${hour}:${min}:${sec} AM </h2>
+    <h2>You have Complete The Task ${taskTitle} at ${hour}:${min}:${sec} ${AmPm} </h2>
     `;
     historyContainer.appendChild(div);
   });
