@@ -122,4 +122,4 @@ year = today.getFullYear();
 date = today.getDate();
 day = days[today.getDay()];
 month = months[today.getMonth()];
-todayDate.innerHTML = `${day}, <br/> <h1 class="font-bold text-lg">${month} ${date} ${year}</h1>`;
+todayDate.innerHTML = `${day}, <br/> <h1 class="font-bold text-lg">${month} ${date} , ${year}</h1>`;
